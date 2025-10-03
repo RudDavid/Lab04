@@ -9,42 +9,43 @@
 
 using namespace std;
 
-const int m = 100, n = 100;
+const int indexM = 100, indexN = 100;
 
 int main() {
-  double t[m][n];
+  double t[indexM][indexN];
   // Столбец
   double column;
   // Строка
   double line;
-  int indexI;
-  int indexJ;
+  int indexLine;
+  int indexColumn;
 
   cout << "Enter number of lines: ";
   cin >> column;
   cout << "Enter number of column: ";
   cin >> line;
   cout << "Enter elements = " << endl;
-  for (indexI = 0; indexI < line; ++indexI) {
-    for (indexJ = 0; indexJ < column; ++indexJ) {
-      cin >> t[indexI][indexJ];
+  for (indexLine = 0; indexLine < line; ++indexLine) {
+    for (indexColumn = 0; indexColumn < column; ++indexColumn) {
+      cin >> t[indexLine][indexColumn];
     }
   }
-  for (indexI = 0; indexI < line; ++indexI) {
-    for (indexJ = 0; indexJ < column; ++indexJ) {
-      if (t[indexI][indexJ] < 0) {
-        t[indexI][indexJ] = 0;
+  for (indexLine = 0; indexLine < line; ++indexLine) {
+    for (indexColumn = 0; indexColumn < column; ++indexColumn) {
+      if (t[indexLine][indexColumn] < 0) {
+        t[indexLine][indexColumn] = 0;
       }
     }
   }
   
   cout << "Original matrix" << endl;
-  for (indexI = 0; indexI < line; ++indexI) {
-    for (indexJ = 0; indexJ < column; ++indexJ) {
-      cout << t[indexI][indexJ] << " ";
+  for (indexLine = 0; indexLine < line; ++indexLine) {
+    for (indexColumn = 0; indexColumn < column; ++indexColumn) {
+      cout << t[indexLine][indexColumn] << " ";
     }
     cout << endl;
   }
 
   return 0;
+
 }
